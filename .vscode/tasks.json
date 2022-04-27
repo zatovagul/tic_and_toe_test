@@ -1,0 +1,95 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "Localize",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "options": {
+                "cwd": "${cwd}"
+            },
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": ["gen-l10n"],
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+		{
+			"type": "shell",
+            "command": "flutter",
+            "group": "build",
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"build",
+				"--delete-conflicting-outputs",
+			],
+			"presentation": {
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+			"label": "flutter: flutter pub run build_runner build",
+			"detail": ""
+		},
+		{
+            "label": "Build APK (Release)",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "options": {
+                "cwd": "${cwd}"
+            },
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": ["build", "apk", "--release"],
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build IPA (Release)",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "options": {
+                "cwd": "${cwd}"
+            },
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": ["build", "ios", "--release"],
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+	]
+}
