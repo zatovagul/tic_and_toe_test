@@ -90,6 +90,32 @@
                 "clear": false
             },
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "tic-tac-toe: generate metrics",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "pub",
+                "run",
+                "dart_code_metrics:metrics",
+                "analyze",
+                "lib",
+                "--reporter=html"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
 	]
 }
