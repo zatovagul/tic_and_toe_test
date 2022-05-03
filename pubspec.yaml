@@ -14,6 +14,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  json_annotation: ^4.5.0
+
   #Localization
   intl: ^0.17.0
 
@@ -27,6 +29,9 @@ dependencies:
   #Storage
   hive: ^2.0.6
   hive_flutter: ^1.1.0
+
+  #Network
+  graphql_flutter: ^5.1.0
 
   #Utils
   equatable: ^2.0.3
@@ -43,6 +48,8 @@ dev_dependencies:
   injectable_generator: ^1.1.2
   hive_generator: ^1.1.2
   dart_code_metrics: ^4.14.0
+  graphql_codegen: ^0.7.2
+  json_serializable: ^6.2.0
 
 flutter:
   uses-material-design: true
